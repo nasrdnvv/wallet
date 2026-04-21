@@ -10,6 +10,7 @@ class Entity:
     def __eq__(self, value: object) -> bool:
         if not isinstance(value, type(self)):
             return False
+        return self.id_ == value.id_
 
     def __hash__(self) -> int:
         return hash(self.id_)
